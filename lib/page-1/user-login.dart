@@ -1,22 +1,24 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:myapp/page-1/home.dart';
+import 'package:myapp/page-1/recovery.dart';
 import 'package:myapp/utils.dart';
 
 class Login extends StatelessWidget {
+  const Login({super.key});
+
   @override
   Widget build(BuildContext context) {
     double baseWidth = 375;
     double fem = MediaQuery.of(context).size.width / baseWidth;
     double ffem = fem * 0.97;
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         child: Container(
           // userloginbW5 (5:262)
           width: double.infinity,
           height: 610 * fem,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: Color(0xff131b61),
           ),
           child: Stack(
@@ -32,7 +34,7 @@ class Login extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(37 * fem),
-                        color: Color(0x23eae9e9),
+                        color: const Color(0x23eae9e9),
                       ),
                     ),
                   ),
@@ -49,7 +51,7 @@ class Login extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(37 * fem),
-                        color: Color(0x23eae9e9),
+                        color: const Color(0x23eae9e9),
                       ),
                     ),
                   ),
@@ -66,7 +68,7 @@ class Login extends StatelessWidget {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(37 * fem),
-                        color: Color(0x23eae9e9),
+                        color: const Color(0x23eae9e9),
                       ),
                     ),
                   ),
@@ -89,7 +91,7 @@ class Login extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         height: 1.5 * ffem / fem,
                         letterSpacing: -0.1650000066 * fem,
-                        color: Color(0xff141b62),
+                        color: const Color(0xff141b62),
                       ),
                     ),
                   ),
@@ -102,9 +104,9 @@ class Login extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 40),
+                      // const SizedBox(height: 40),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -120,7 +122,7 @@ class Login extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                   height: 1.5 * ffem / fem,
                                   letterSpacing: -0.1650000066 * fem,
-                                  color: Color(0xffffffff),
+                                  color: const Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -135,21 +137,20 @@ class Login extends StatelessWidget {
                                   fontWeight: FontWeight.w600,
                                   height: 1.5 * ffem / fem,
                                   letterSpacing: -0.1650000066 * fem,
-                                  color: Color(0xffffffff),
+                                  color: const Color(0xffffffff),
                                 ),
                               ),
                             ),
                           ],
                         ),
                       ),
-                      const SizedBox(height: 20),
                       SizedBox(
                         width: 425 * fem,
                         height: 517 * fem,
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(62 * fem),
-                            color: Color(0xffffffff),
+                            color: const Color(0xffffffff),
                           ),
                         ),
                       ),
@@ -166,7 +167,7 @@ class Login extends StatelessWidget {
                     width: 76.01 * fem,
                     height: 3 * fem,
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Color(0xffe7267a),
                       ),
                     ),
@@ -189,7 +190,7 @@ class Login extends StatelessWidget {
                       child: Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5 * fem),
-                          color: Color(0xff141b62),
+                          color: const Color(0xff141b62),
                         ),
                       ),
                     ),
@@ -217,7 +218,7 @@ class Login extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                           height: 1.5 * ffem / fem,
                           letterSpacing: -0.1650000066 * fem,
-                          color: Color(0xffffffff),
+                          color: const Color(0xffffffff),
                         ),
                       ),
                     ),
@@ -232,7 +233,7 @@ class Login extends StatelessWidget {
                   width: 339 * fem,
                   height: 70 * fem,
                   decoration: BoxDecoration(
-                    color: Color(0xff141b62),
+                    color: const Color(0xff141b62),
                     borderRadius: BorderRadius.circular(5 * fem),
                   ),
                   child: Stack(
@@ -254,7 +255,7 @@ class Login extends StatelessWidget {
                                 fontWeight: FontWeight.w700,
                                 height: 1.5 * ffem / fem,
                                 letterSpacing: -0.1650000066 * fem,
-                                color: Color(0xffffffff),
+                                color: const Color(0xffffffff),
                               ),
                             ),
                           ),
@@ -265,7 +266,14 @@ class Login extends StatelessWidget {
                         left: 0 * fem,
                         top: 0 * fem,
                         child: TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => Home(),
+                              ),
+                            );
+                          },
                           style: TextButton.styleFrom(
                             padding: EdgeInsets.zero,
                           ),
@@ -273,7 +281,7 @@ class Login extends StatelessWidget {
                             width: 339 * fem,
                             height: 70 * fem,
                             decoration: BoxDecoration(
-                              color: Color(0xff141b62),
+                              color: const Color(0xff141b62),
                               borderRadius: BorderRadius.circular(5 * fem),
                             ),
                             child: Center(
@@ -286,7 +294,7 @@ class Login extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                   height: 1.5 * ffem / fem,
                                   letterSpacing: -0.1650000066 * fem,
-                                  color: Color(0xffffffff),
+                                  color: const Color(0xffffffff),
                                 ),
                               ),
                             ),
@@ -314,7 +322,7 @@ class Login extends StatelessWidget {
                           fontWeight: FontWeight.w600,
                           height: 1.5 * ffem / fem,
                           letterSpacing: -0.1650000066 * fem,
-                          color: Color(0xa5141b62),
+                          color: const Color(0xa5141b62),
                         ),
                         children: [
                           TextSpan(
@@ -325,7 +333,7 @@ class Login extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                               height: 1.5 * ffem / fem,
                               letterSpacing: -0.1650000066 * fem,
-                              color: Color(0x75141b62),
+                              color: const Color(0x75141b62),
                             ),
                           ),
                           TextSpan(
@@ -336,7 +344,7 @@ class Login extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                               height: 1.5 * ffem / fem,
                               letterSpacing: -0.1650000066 * fem,
-                              color: Color(0xce141b62),
+                              color: const Color(0xce141b62),
                             ),
                           ),
                         ],
@@ -354,7 +362,14 @@ class Login extends StatelessWidget {
                     width: 82 * fem,
                     height: 24 * fem,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => ForgotPassword(),
+                          ),
+                        );
+                      },
                       style: TextButton.styleFrom(
                         padding: EdgeInsets.zero,
                       ),
@@ -367,7 +382,7 @@ class Login extends StatelessWidget {
                           fontWeight: FontWeight.w700,
                           height: 1.5 * ffem / fem,
                           letterSpacing: -0.1650000066 * fem,
-                          color: Color(0xce141b62),
+                          color: const Color(0xce141b62),
                         ),
                       ),
                     ),
@@ -384,8 +399,8 @@ class Login extends StatelessWidget {
                     height: 54 * fem,
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0x44141b62)),
-                        color: Color(0xffebebeb),
+                        border: Border.all(color: const Color(0x44141b62)),
+                        color: const Color(0xffebebeb),
                         borderRadius: BorderRadius.circular(5 * fem),
                       ),
                       child: TextField(
@@ -413,8 +428,8 @@ class Login extends StatelessWidget {
                     height: 54 * fem,
                     child: Container(
                       decoration: BoxDecoration(
-                        border: Border.all(color: Color(0x44141b62)),
-                        color: Color(0xffebebeb),
+                        border: Border.all(color: const Color(0x44141b62)),
+                        color: const Color(0xffebebeb),
                         borderRadius: BorderRadius.circular(5 * fem),
                       ),
                       child: TextField(

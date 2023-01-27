@@ -86,9 +86,8 @@ class Register extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(height: 40),
                       Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        padding: const EdgeInsets.all(30),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -126,7 +125,6 @@ class Register extends StatelessWidget {
                           ],
                         ),
                       ),
-                      const SizedBox(height: 20),
                       SizedBox(
                         width: 425 * fem,
                         height: 517 * fem,
